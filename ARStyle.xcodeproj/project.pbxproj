@@ -15,9 +15,6 @@
 		263585E12881DC5300828682 /* ARStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585E02881DC5300828682 /* ARStyleTests.swift */; };
 		263585EB2881DC5300828682 /* ARStyleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585EA2881DC5300828682 /* ARStyleUITests.swift */; };
 		263585ED2881DC5300828682 /* ARStyleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585EC2881DC5300828682 /* ARStyleUITestsLaunchTests.swift */; };
-		263585FA2881DCFD00828682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263585F92881DCFD00828682 /* LaunchScreen.storyboard */; };
-		263585FC2881E28300828682 /* CategoryCarouesel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585FB2881E28300828682 /* CategoryCarouesel.swift */; };
-		D4ADBE8375C428AACEEECBB2 /* Pods_ARStyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED6F38031A3658D2E3E338D /* Pods_ARStyle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +46,6 @@
 		263585E62881DC5300828682 /* ARStyleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARStyleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		263585EA2881DC5300828682 /* ARStyleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARStyleUITests.swift; sourceTree = "<group>"; };
 		263585EC2881DC5300828682 /* ARStyleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARStyleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		263585F92881DCFD00828682 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		263585FB2881E28300828682 /* CategoryCarouesel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCarouesel.swift; sourceTree = "<group>"; };
-		8ED6F38031A3658D2E3E338D /* Pods_ARStyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARStyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD6240F0D93110E0F8CEA4CB /* Pods-ARStyle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARStyle.debug.xcconfig"; path = "Target Support Files/Pods-ARStyle/Pods-ARStyle.debug.xcconfig"; sourceTree = "<group>"; };
-		FAC9A1309321CC450B534471 /* Pods-ARStyle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARStyle.release.xcconfig"; path = "Target Support Files/Pods-ARStyle/Pods-ARStyle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4ADBE8375C428AACEEECBB2 /* Pods_ARStyle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +80,6 @@
 				263585DF2881DC5300828682 /* ARStyleTests */,
 				263585E92881DC5300828682 /* ARStyleUITests */,
 				263585CB2881DC5000828682 /* Products */,
-				F5C49D9D09B7A3299930ED41 /* Pods */,
-				6A271D9A7F611F2B81C90D97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,8 +101,6 @@
 				263585D12881DC5000828682 /* Experience.rcproject */,
 				263585D32881DC5200828682 /* Assets.xcassets */,
 				263585D52881DC5200828682 /* Preview Content */,
-				263585F92881DCFD00828682 /* LaunchScreen.storyboard */,
-				263585FB2881E28300828682 /* CategoryCarouesel.swift */,
 			);
 			path = ARStyle;
 			sourceTree = "<group>";
@@ -141,24 +128,6 @@
 				263585EC2881DC5300828682 /* ARStyleUITestsLaunchTests.swift */,
 			);
 			path = ARStyleUITests;
-			sourceTree = "<group>";
-		};
-		6A271D9A7F611F2B81C90D97 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8ED6F38031A3658D2E3E338D /* Pods_ARStyle.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F5C49D9D09B7A3299930ED41 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BD6240F0D93110E0F8CEA4CB /* Pods-ARStyle.debug.xcconfig */,
-				FAC9A1309321CC450B534471 /* Pods-ARStyle.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +236,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				263585FA2881DCFD00828682 /* LaunchScreen.storyboard in Resources */,
 				263585D72881DC5200828682 /* Preview Assets.xcassets in Resources */,
 				263585D42881DC5200828682 /* Assets.xcassets in Resources */,
 			);
@@ -339,7 +307,6 @@
 				263585D02881DC5000828682 /* ContentView.swift in Sources */,
 				263585CE2881DC5000828682 /* AppDelegate.swift in Sources */,
 				263585D22881DC5000828682 /* Experience.rcproject in Sources */,
-				263585FC2881E28300828682 /* CategoryCarouesel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +459,6 @@
 		};
 		263585F12881DC5300828682 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD6240F0D93110E0F8CEA4CB /* Pods-ARStyle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -524,7 +490,6 @@
 		};
 		263585F22881DC5300828682 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAC9A1309321CC450B534471 /* Pods-ARStyle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
