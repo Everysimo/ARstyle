@@ -7,62 +7,73 @@
 
 import SwiftUI
 import RealityKit
+import ARKit
 
+var arView:ARView!
 
 struct ContentView : View {
-    @State var propId: Int = 0
-    @State var categoryId: Int = 0
-    
+    @State var propId:Int=0
     var body: some View {
-        ZStack(alignment: .bottom) {
-          // 2
-          ARViewContainer(propId: $propId,categoryId: $categoryId).edgesIgnoringSafeArea(.all)
-          // 3
-            VStack{
-                CustomPicker()
-                HStack {
-                    Button(action: {
-                      self.propId = self.propId <= 0 ? 0 : self.propId - 1
-                    }) {
-                      Image("PreviousButton").clipShape(Circle())
-                    }
-                    Button(action: {
-                      //self.TakeSnapshot()
-                    }) {
-                      Image("ShutterButton").clipShape(Circle())
-                    }
-                    Button(action: {
-                      self.propId = self.propId >= 2 ? 2 : self.propId + 1
-                    }) {
-                      Image("NextButton").clipShape(Circle())
-                    }
+        ZStack(alignment: .bottom){
+            ARViewContainer(propId:  $propId).edgesIgnoringSafeArea(.all)
+            HStack{
+                Spacer()
+                Button(action: {
+                    self.propId=self.propId <= 0 ? 0 : self.propId-1
+                }){
+                    Image(systemName:"arrowtriangle.left.fill")
                 }
+                Spacer()
+                Button(action:{
+                    self.takeSnapshot()
+                }){
+                    Image(systemName:"camera.shutter.button.fill")
+                }
+                Spacer()
+                Button(action: {
+                    self.propId=self.propId <= 2 ? 2 : self.propId+1
+                }){
+                    Image(systemName: "arrowtriangle.right.fill")
+                }
+                Spacer()
             }
+        }
+    }
+    func takeSnapshot(){
+        arView.snapshot(saveToHDR: false){
+            (image) in
+            let compressedImage=UIImage(data: (image?.pngData())!)
+            UIImageWriteToSavedPhotosAlbum(compressedImage!,nil,nil,nil)
         }
     }
 }
 
 
-struct ARViewContainer: UIViewRepresentable {
-    @Binding var propId: Int
-    @Binding var categoryId: Int
+struct ARViewContainer:
+    UIViewRepresentable {
+    
+    @Binding var propId:Int
     
     func makeUIView(context: Context) -> ARView {
         
-        let arView = ARView(frame: .zero)
-        
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
-        
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
-        
+        arView = ARView(frame: .zero)
         return arView
         
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {}
-    
+    func updateUIView(_ uiView: ARView, context: Context) {
+        let arConfiguration=ARFaceTrackingConfiguration()
+        uiView.session.run(arConfiguration, options: [.resetTracking, .removeExistingAnchors])
+        
+        switch(propId){
+            
+            case 0:
+            let arAncor = try! Experience.loadGlasses1black()
+            uiView.scene.anchors.append(arAncor)
+            default:
+                break
+        }
+    }
 }
 
 #if DEBUG
