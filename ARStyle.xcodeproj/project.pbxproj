@@ -15,6 +15,7 @@
 		263585E12881DC5300828682 /* ARStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585E02881DC5300828682 /* ARStyleTests.swift */; };
 		263585EB2881DC5300828682 /* ARStyleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585EA2881DC5300828682 /* ARStyleUITests.swift */; };
 		263585ED2881DC5300828682 /* ARStyleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585EC2881DC5300828682 /* ARStyleUITestsLaunchTests.swift */; };
+		4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE01945288567E7004FEDDD /* CustomPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		263585E62881DC5300828682 /* ARStyleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARStyleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		263585EA2881DC5300828682 /* ARStyleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARStyleUITests.swift; sourceTree = "<group>"; };
 		263585EC2881DC5300828682 /* ARStyleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARStyleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4DE01945288567E7004FEDDD /* CustomPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				263585CD2881DC5000828682 /* AppDelegate.swift */,
 				263585CF2881DC5000828682 /* ContentView.swift */,
+				4DE01945288567E7004FEDDD /* CustomPicker.swift */,
 				263585D12881DC5000828682 /* Experience.rcproject */,
 				263585D32881DC5200828682 /* Assets.xcassets */,
 				263585D52881DC5200828682 /* Preview Content */,
@@ -306,6 +309,7 @@
 			files = (
 				263585D02881DC5000828682 /* ContentView.swift in Sources */,
 				263585CE2881DC5000828682 /* AppDelegate.swift in Sources */,
+				4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */,
 				263585D22881DC5000828682 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
