@@ -14,8 +14,8 @@
 		263585E12881DC5300828682 /* ARStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585E02881DC5300828682 /* ARStyleTests.swift */; };
 		263585EB2881DC5300828682 /* ARStyleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585EA2881DC5300828682 /* ARStyleUITests.swift */; };
 		263585ED2881DC5300828682 /* ARStyleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585EC2881DC5300828682 /* ARStyleUITestsLaunchTests.swift */; };
+		4DB9DD1E2885CEE20063340F /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9DD1D2885CEE20063340F /* Experience.rcproject */; };
 		4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE01945288567E7004FEDDD /* CustomPicker.swift */; };
-		4DF90ED828858F60005A1E7C /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DF90EDA28858F60005A1E7C /* Experience.rcproject */; };
 		4DF90EDE2885947B005A1E7C /* model.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF90EDD2885947B005A1E7C /* model.scnassets */; };
 /* End PBXBuildFile section */
 
@@ -47,8 +47,8 @@
 		263585E62881DC5300828682 /* ARStyleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARStyleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		263585EA2881DC5300828682 /* ARStyleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARStyleUITests.swift; sourceTree = "<group>"; };
 		263585EC2881DC5300828682 /* ARStyleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARStyleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4DB9DD1D2885CEE20063340F /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		4DE01945288567E7004FEDDD /* CustomPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
-		4DF90ED928858F60005A1E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Base; path = Base.lproj/Experience.rcproject; sourceTree = "<group>"; };
 		4DF90EDD2885947B005A1E7C /* model.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = model.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,10 +103,10 @@
 				263585CD2881DC5000828682 /* AppDelegate.swift */,
 				263585CF2881DC5000828682 /* ContentView.swift */,
 				4DE01945288567E7004FEDDD /* CustomPicker.swift */,
-				4DF90EDA28858F60005A1E7C /* Experience.rcproject */,
 				263585D32881DC5200828682 /* Assets.xcassets */,
 				263585D52881DC5200828682 /* Preview Content */,
 				4DF90EDD2885947B005A1E7C /* model.scnassets */,
+				4DB9DD1D2885CEE20063340F /* Experience.rcproject */,
 			);
 			path = ARStyle;
 			sourceTree = "<group>";
@@ -269,8 +269,8 @@
 			files = (
 				263585D02881DC5000828682 /* ContentView.swift in Sources */,
 				263585CE2881DC5000828682 /* AppDelegate.swift in Sources */,
+				4DB9DD1E2885CEE20063340F /* Experience.rcproject in Sources */,
 				4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */,
-				4DF90ED828858F60005A1E7C /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,17 +305,6 @@
 			targetProxy = 263585E72881DC5300828682 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		4DF90EDA28858F60005A1E7C /* Experience.rcproject */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4DF90ED928858F60005A1E7C /* Base */,
-			);
-			name = Experience.rcproject;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		263585EE2881DC5300828682 /* Debug */ = {
