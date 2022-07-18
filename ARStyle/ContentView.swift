@@ -19,6 +19,7 @@ struct ContentView : View {
           ARViewContainer(propId: $propId,categoryId: $categoryId).edgesIgnoringSafeArea(.all)
           // 3
             VStack{
+                CustomPicker()
                 HStack {
                     Button(action: {
                       self.propId = self.propId <= 0 ? 0 : self.propId - 1

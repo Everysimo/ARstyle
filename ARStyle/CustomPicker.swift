@@ -16,16 +16,16 @@ struct CustomPicker : View {
         Picker("chose a object", selection: $selectedItem){
             ForEach(img, id: \.self){
                 item in
-                Image(systemName: item)
-                    .resizable()
-                    .scaledToFit()
-                    .rotationEffect(Angle(degrees: 90))
+                Button(action: {
+                  //self.TakeSnapshot()
+                }) {
+                  Image("ShutterButton").clipShape(Circle())
+                }
             }
         }
         .labelsHidden()
         .pickerStyle(.wheel)
         .rotationEffect(Angle(degrees: -90))
-        .frame(maxHeight: 100)
         .clipped()
     }
 }
