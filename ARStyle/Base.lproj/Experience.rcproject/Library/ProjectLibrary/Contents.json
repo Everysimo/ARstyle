@@ -43,5 +43,15 @@
     "libraryIdentifier" : "98c1a2a689ff5e95bd63d6a0e4a5a8e8",
     "format" : "model",
     "displayName" : "primavera2.usdz"
+  },
+  {
+    "libraryIdentifier" : "53d54365a8d9837f855741e8fb163d3b",
+    "format" : "model",
+    "displayName" : "nero.usdz"
+  },
+  {
+    "libraryIdentifier" : "d237f8bf88ee86baae0368bed38153f2",
+    "format" : "model",
+    "displayName" : "autunno1.usdz"
   }
 ]

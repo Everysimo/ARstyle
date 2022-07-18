@@ -68,7 +68,7 @@ struct ARViewContainer:
         switch(propId){
             
             case 0:
-            let arAncor = try! Experience.loadGlasses1black()
+            let arAncor = try! Experience.loadGlasses2black()
             uiView.scene.anchors.append(arAncor)
             default:
                 break
