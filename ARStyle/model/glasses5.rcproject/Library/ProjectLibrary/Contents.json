@@ -1,0 +1,47 @@
+[
+  {
+    "libraryIdentifier" : "745f3a403c5de64b5006609fed9d9897",
+    "format" : "model",
+    "displayName" : "autunno1.usdz"
+  },
+  {
+    "libraryIdentifier" : "343d38f4a81039ea6e6da7f038a521a2",
+    "format" : "model",
+    "displayName" : "autunno2.usdz"
+  },
+  {
+    "libraryIdentifier" : "799a98dc9336d73a777c1988074af479",
+    "format" : "model",
+    "displayName" : "estate1.usdz"
+  },
+  {
+    "libraryIdentifier" : "c3c978c9bdaa47e19da5207022200f16",
+    "format" : "model",
+    "displayName" : "estate2.usdz"
+  },
+  {
+    "libraryIdentifier" : "8424100fdf01c17ce379539f06ec6660",
+    "format" : "model",
+    "displayName" : "inverno1.usdz"
+  },
+  {
+    "libraryIdentifier" : "f9ddd7ed4c007e676d33a5775cc53d84",
+    "format" : "model",
+    "displayName" : "inverno2.usdz"
+  },
+  {
+    "libraryIdentifier" : "340ba461f28f2a699b94e7beabcd5b34",
+    "format" : "model",
+    "displayName" : "nero.usdz"
+  },
+  {
+    "libraryIdentifier" : "e02793427a2f5eaa821848e409460c61",
+    "format" : "model",
+    "displayName" : "primavera1.usdz"
+  },
+  {
+    "libraryIdentifier" : "ebd933c75c5fc6aedb09387d1083b94e",
+    "format" : "model",
+    "displayName" : "primavera2.usdz"
+  }
+]
