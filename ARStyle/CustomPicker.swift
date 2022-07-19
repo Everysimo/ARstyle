@@ -39,17 +39,6 @@ struct CustomPicker : View {
                         .frame(height: 80)
                         .overlay(Circle().stroke(Color.red,lineWidth:4))
                         .padding(.horizontal, 5)
-                        .gesture(
-                            DragGesture()
-                                .onChanged { gesture in
-                                    if(gesture.translation.width>0){
-                                        if(!((imgSelect-img.count+1)==0)){
-                                            imgSelect=imgSelect+1
-                                        }
-                                    }
-                                }
-                                .onEnded {_ in }
-                        )
                 case 1:
                     Image("")
                         .resizable()
@@ -74,19 +63,7 @@ struct CustomPicker : View {
                         .frame(height: 80)
                         .overlay(Circle().stroke(Color.red,lineWidth:4))
                         .padding(.horizontal, 5)
-                        .gesture(
-                            DragGesture()
-                                .onChanged { gesture in
-                                    if(gesture.translation.width>0){
-                                        if(!((imgSelect-img.count+1)==0)){
-                                            imgSelect=imgSelect+1
-                                        }
-                                    }else{
-                                        imgSelect=imgSelect-1
-                                    }
-                                }
-                                .onEnded {_ in }
-                        )
+                        
                 default:
                     Image(systemName: img[imgSelect-2])
                         .resizable()
@@ -112,19 +89,6 @@ struct CustomPicker : View {
                         .frame(height: 80)
                         .overlay(Circle().stroke(Color.red,lineWidth:4))
                         .padding(.horizontal, 5)
-                        .gesture(
-                            DragGesture()
-                                .onChanged { gesture in
-                                    if(gesture.translation.width>0){
-                                        if(!((imgSelect-img.count+1)==0)){
-                                            imgSelect=imgSelect+1
-                                        }
-                                    }else{
-                                        imgSelect=imgSelect-1
-                                    }
-                                }
-                                .onEnded {_ in }
-                        )
             }
             switch((imgSelect-img.count)+1){
                 case 0:
@@ -176,7 +140,22 @@ struct CustomPicker : View {
                         .overlay(Circle().stroke(Color.black,lineWidth:4))
                         .padding(.horizontal, 5)
             }
-        }
+        }.gesture(
+            DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                .onChanged { _ in }
+                .onEnded {
+                    gesture in
+                    if(gesture.translation.width>0){
+                        if(!((imgSelect-img.count+1)==0)){
+                            imgSelect=imgSelect+1
+                        }
+                    }else if(gesture.translation.width<0){
+                        if(!(imgSelect==0)){
+                            imgSelect=imgSelect-1
+                        }
+                    }
+                }
+        )
     }
 }
 
