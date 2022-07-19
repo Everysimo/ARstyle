@@ -17,6 +17,8 @@
 		4D3A2850288615C600CBA859 /* glasses1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A284F288615C600CBA859 /* glasses1.rcproject */; };
 		4D3A2852288616CF00CBA859 /* glasses2.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A2851288616CF00CBA859 /* glasses2.rcproject */; };
 		4D3A2854288624D400CBA859 /* glasses3.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A2853288624D400CBA859 /* glasses3.rcproject */; };
+		4D3A2856288631EE00CBA859 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A2855288631EE00CBA859 /* Experience.rcproject */; };
+		4D3A28582886358900CBA859 /* glasses4.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A28572886358900CBA859 /* glasses4.rcproject */; };
 		4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE01945288567E7004FEDDD /* CustomPicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		4D3A284F288615C600CBA859 /* glasses1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses1.rcproject; sourceTree = "<group>"; };
 		4D3A2851288616CF00CBA859 /* glasses2.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses2.rcproject; sourceTree = "<group>"; };
 		4D3A2853288624D400CBA859 /* glasses3.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses3.rcproject; sourceTree = "<group>"; };
+		4D3A2855288631EE00CBA859 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		4D3A28572886358900CBA859 /* glasses4.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses4.rcproject; sourceTree = "<group>"; };
 		4DE01945288567E7004FEDDD /* CustomPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +112,7 @@
 				4DE01945288567E7004FEDDD /* CustomPicker.swift */,
 				263585D32881DC5200828682 /* Assets.xcassets */,
 				263585D52881DC5200828682 /* Preview Content */,
+				4D3A2855288631EE00CBA859 /* Experience.rcproject */,
 			);
 			path = ARStyle;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 		4D3A284A2886151D00CBA859 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				4D3A28572886358900CBA859 /* glasses4.rcproject */,
 				4D3A2853288624D400CBA859 /* glasses3.rcproject */,
 				4D3A2851288616CF00CBA859 /* glasses2.rcproject */,
 				4D3A284F288615C600CBA859 /* glasses1.rcproject */,
@@ -279,9 +285,11 @@
 			files = (
 				4D3A2850288615C600CBA859 /* glasses1.rcproject in Sources */,
 				263585D02881DC5000828682 /* ContentView.swift in Sources */,
+				4D3A28582886358900CBA859 /* glasses4.rcproject in Sources */,
 				4D3A2852288616CF00CBA859 /* glasses2.rcproject in Sources */,
 				4D3A2854288624D400CBA859 /* glasses3.rcproject in Sources */,
 				263585CE2881DC5000828682 /* AppDelegate.swift in Sources */,
+				4D3A2856288631EE00CBA859 /* Experience.rcproject in Sources */,
 				4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
