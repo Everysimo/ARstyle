@@ -16,6 +16,7 @@ struct ContentView : View {
     var body: some View {
         ZStack(alignment: .bottom){
             ARViewContainer(propId:  $propId).edgesIgnoringSafeArea(.all)
+            CustomPicker()
             HStack{
                 Spacer()
                 Button(action: {
