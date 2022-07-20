@@ -12,150 +12,73 @@ struct CustomPicker : View {
     var img = ["square.and.arrow.up","square.and.arrow.down","square.and.arrow.up.on.square","square.and.arrow.down.on.square","cursorarrow.and.square.on.square.dashed"]
 
     @State var imgSelect:Int = 0
+    @State var offSetX:Double = 78.0
+    @State var oldOffSet:Double = 78.0
     
     var body: some View {
-        HStack{
-            switch(imgSelect){
-                case 0:
+        ZStack{
+            LazyHGrid(rows: [GridItem()]){
                 Image("")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(.all, 15.0)
-                    .clipShape(Circle())
-                    .frame(height: 80)
-                    .padding(.horizontal, 10.0)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.all, 15.0)
+                        .clipShape(Circle())
+                        .frame(width: 63.0, height: 63)
+                        .padding(.horizontal, 5)
                 Image("")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(.all, 15.0)
-                    .clipShape(Circle())
-                    .frame(height: 80)
-                    .padding(.horizontal, 10.0)
-                Image(systemName: img[imgSelect])
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .padding(.all, 15.0)
                         .clipShape(Circle())
-                        .frame(height: 80)
-                        .overlay(Circle().stroke(Color.red,lineWidth:4))
+                        .frame(width: 63.0, height: 63)
                         .padding(.horizontal, 5)
-                case 1:
-                    Image("")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(height: 80)
-                        .padding(.horizontal, 5)
-                    Image(systemName: img[imgSelect-1])
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(height: 80)
-                        .overlay(Circle().stroke(Color.black,lineWidth:4))
-                        .padding(.horizontal, 5)
-                    Image(systemName: img[imgSelect])
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(height: 80)
-                        .overlay(Circle().stroke(Color.red,lineWidth:4))
-                        .padding(.horizontal, 5)
-                        
-                default:
-                    Image(systemName: img[imgSelect-2])
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(height: 80)
-                        .overlay(Circle().stroke(Color.black,lineWidth:4))
-                        .padding(.horizontal, 5)
-                    Image(systemName: img[imgSelect-1])
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(height: 80)
-                        .overlay(Circle().stroke(Color.black,lineWidth:4))
-                        .padding(.horizontal, 5)
-                    Image(systemName: img[imgSelect])
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(height: 80)
-                        .overlay(Circle().stroke(Color.red,lineWidth:4))
-                        .padding(.horizontal, 5)
+                ForEach(img, id: \.self){
+                    item  in
+                    Image(systemName: item)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.all, 15.0)
+                            .clipShape(Circle())
+                            .frame(width: 63.0, height: 63.0)
+                            .padding(.horizontal, 5)
+                }
             }
-            switch((imgSelect-img.count)+1){
-                case 0:
-                    Image("")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(height: 80)
-                        .padding(.horizontal, 5)
-                    Image("")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(height: 80)
-                        .padding(.horizontal, 5)
-                case -1:
-                Image(systemName: img[imgSelect+1])
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(height: 80)
-                        .overlay(Circle().stroke(Color.black,lineWidth:4))
-                        .padding(.horizontal, 5)
-                    Image("")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(height: 80)
-                        .padding(.horizontal, 5)
-                default :
-                Image(systemName: img[imgSelect+1])
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(height: 80)
-                        .overlay(Circle().stroke(Color.black,lineWidth:4))
-                        .padding(.horizontal, 5)
-                Image(systemName: img[imgSelect+2])
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(height: 80)
-                        .overlay(Circle().stroke(Color.black,lineWidth:4))
-                        .padding(.horizontal, 5)
-            }
-        }.gesture(
-            DragGesture(minimumDistance: 0, coordinateSpace: .local)
-                .onChanged { _ in }
-                .onEnded {
-                    gesture in
-                    if(gesture.translation.width>0){
-                        if(!((imgSelect-img.count+1)==0)){
-                            imgSelect=imgSelect+1
-                        }
-                    }else if(gesture.translation.width<0){
-                        if(!(imgSelect==0)){
-                            imgSelect=imgSelect-1
+            .offset(x: offSetX, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+            .gesture(
+                DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                    .onChanged { gesture in
+                        if(gesture.translation.width<0){
+                            if(!((imgSelect-img.count+1)==0)){
+                                offSetX = offSetX - 0.5
+                            }
+                        }else if(gesture.translation.width>0){
+                            if(!(imgSelect==0)){
+                                offSetX = offSetX + 0.5
+                            }
                         }
                     }
-                }
-        )
+                    .onEnded {
+                        gesture in
+                        if(gesture.translation.width<0){
+                            if(!((imgSelect-img.count+1)==0)){
+                                imgSelect=imgSelect+1
+                                offSetX = oldOffSet - 79
+                            }
+                        }else if(gesture.translation.width>0){
+                            if(!(imgSelect==0)){
+                                imgSelect=imgSelect-1
+                                offSetX = oldOffSet + 79
+                            }
+                        }
+                        oldOffSet=offSetX
+                    }
+            )
+            HStack(){
+                Circle().stroke(Color.red,lineWidth:3)
+                    .frame(width: 63.0, height: 63.0)
+                    .offset(x: /*@START_MENU_TOKEN@*/-2.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+            }
+        }
     }
 }
 
