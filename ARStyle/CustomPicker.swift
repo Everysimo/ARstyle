@@ -43,17 +43,23 @@ struct CustomPicker : View {
                             .padding(.horizontal, 5)
                 }
             }
+            .contentShape(Rectangle())
+            .frame(height: 50)
             .offset(x: offSetX, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
             .gesture(
                 DragGesture(minimumDistance: 0, coordinateSpace: .local)
                     .onChanged { gesture in
                         if(gesture.translation.width<0){
                             if(!((imgSelect-img.count+1)==0)){
-                                offSetX = offSetX - 0.5
+                                if((oldOffSet-79)<(offSetX-10)){
+                                    offSetX = offSetX - 10
+                                }
                             }
                         }else if(gesture.translation.width>0){
                             if(!(imgSelect==0)){
-                                offSetX = offSetX + 0.5
+                                if((oldOffSet+79)>(offSetX+10)){
+                                    offSetX = offSetX + 10
+                                }
                             }
                         }
                     }
