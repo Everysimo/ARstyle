@@ -69,7 +69,7 @@ struct ARViewContainer:
         switch(propId){
             
             case 0:
-            let arAncor = try! Hair9.loadBox()
+            let arAncor = try! Hair9.loadColor1()
             uiView.scene.anchors.append(arAncor)
             default:
                 break

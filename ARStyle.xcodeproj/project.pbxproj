@@ -30,6 +30,7 @@
 		4DD2E3EF2887EDBE0046FD7A /* hair4.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2E3EE2887EDBE0046FD7A /* hair4.rcproject */; };
 		4DD2E3F12887F2F40046FD7A /* hair11.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2E3F02887F2F40046FD7A /* hair11.rcproject */; };
 		4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE01945288567E7004FEDDD /* CustomPicker.swift */; };
+		60F698F828885414006C63A6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F698F728885414006C63A6 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		4DD2E3EE2887EDBE0046FD7A /* hair4.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair4.rcproject; sourceTree = "<group>"; };
 		4DD2E3F02887F2F40046FD7A /* hair11.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair11.rcproject; sourceTree = "<group>"; };
 		4DE01945288567E7004FEDDD /* CustomPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
+		60F698F728885414006C63A6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				4D3A284A2886151D00CBA859 /* model */,
 				263585CD2881DC5000828682 /* AppDelegate.swift */,
 				263585CF2881DC5000828682 /* ContentView.swift */,
+				60F698F728885414006C63A6 /* ProfileView.swift */,
 				4DE01945288567E7004FEDDD /* CustomPicker.swift */,
 				263585D32881DC5200828682 /* Assets.xcassets */,
 				263585D52881DC5200828682 /* Preview Content */,
@@ -329,6 +332,7 @@
 				263585CE2881DC5000828682 /* AppDelegate.swift in Sources */,
 				4DD2E3F12887F2F40046FD7A /* hair11.rcproject in Sources */,
 				4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */,
+				60F698F828885414006C63A6 /* ProfileView.swift in Sources */,
 				4DA0501028883DE8006EEF3D /* hair9.rcproject in Sources */,
 				4DD2E3E92887ED150046FD7A /* hair1.rcproject in Sources */,
 			);
