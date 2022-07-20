@@ -21,6 +21,7 @@
 		4D3A285A28863F2C00CBA859 /* glasses5.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A285928863F2C00CBA859 /* glasses5.rcproject */; };
 		4D3A285C28863FB100CBA859 /* glasses6.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A285B28863FB100CBA859 /* glasses6.rcproject */; };
 		4D3A285E28863FD600CBA859 /* glasses7.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A285D28863FD600CBA859 /* glasses7.rcproject */; };
+		4DD2E3E92887ED150046FD7A /* hair1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2E3E82887ED150046FD7A /* hair1.rcproject */; };
 		4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE01945288567E7004FEDDD /* CustomPicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		4D3A285928863F2C00CBA859 /* glasses5.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses5.rcproject; sourceTree = "<group>"; };
 		4D3A285B28863FB100CBA859 /* glasses6.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses6.rcproject; sourceTree = "<group>"; };
 		4D3A285D28863FD600CBA859 /* glasses7.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses7.rcproject; sourceTree = "<group>"; };
+		4DD2E3E82887ED150046FD7A /* hair1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair1.rcproject; sourceTree = "<group>"; };
 		4DE01945288567E7004FEDDD /* CustomPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +157,7 @@
 				4D3A2851288616CF00CBA859 /* glasses2.rcproject */,
 				4D3A285928863F2C00CBA859 /* glasses5.rcproject */,
 				4D3A284F288615C600CBA859 /* glasses1.rcproject */,
+				4DD2E3E82887ED150046FD7A /* hair1.rcproject */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				4D3A2854288624D400CBA859 /* glasses3.rcproject in Sources */,
 				263585CE2881DC5000828682 /* AppDelegate.swift in Sources */,
 				4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */,
+				4DD2E3E92887ED150046FD7A /* hair1.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
