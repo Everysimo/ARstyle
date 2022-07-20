@@ -16,28 +16,30 @@ struct ContentView : View {
     var body: some View {
         ZStack(alignment: .bottom){
             ARViewContainer(propId:  $propId).edgesIgnoringSafeArea(.all)
-            CustomPicker()
-//            HStack{
-//                Spacer()
-//                Button(action: {
-//                    self.propId=self.propId <= 0 ? 0 : self.propId-1
-//                }){
-//                    Image(systemName:"arrowtriangle.left.fill")
-//                }
-//                Spacer()
-//                Button(action:{
-//                    self.takeSnapshot()
-//                }){
-//                    Image(systemName:"camera.shutter.button.fill")
-//                }
-//                Spacer()
-//                Button(action: {
-//                    self.propId=self.propId <= 2 ? 2 : self.propId+1
-//                }){
-//                    Image(systemName: "arrowtriangle.right.fill")
-//                }
-//                Spacer()
-//            }
+            VStack{
+                HStack{
+                    Spacer()
+                    Button(action: {
+                        self.propId=self.propId <= 0 ? 0 : self.propId-1
+                    }){
+                        Image(systemName:"arrowtriangle.left.fill")
+                    }
+                    Spacer()
+                    Button(action:{
+                        self.takeSnapshot()
+                    }){
+                        Image("ShutterButton")
+                    }
+                    Spacer()
+                    Button(action: {
+                        self.propId=self.propId <= 2 ? 2 : self.propId+1
+                    }){
+                        Image(systemName: "arrowtriangle.right.fill")
+                    }
+                    Spacer()
+                }
+                CustomPicker()
+            }
         }
     }
     func takeSnapshot(){
