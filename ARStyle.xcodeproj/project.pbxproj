@@ -22,6 +22,7 @@
 		4D3A285C28863FB100CBA859 /* glasses6.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A285B28863FB100CBA859 /* glasses6.rcproject */; };
 		4D3A285E28863FD600CBA859 /* glasses7.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A285D28863FD600CBA859 /* glasses7.rcproject */; };
 		4DA0500A28882CE8006EEF3D /* hair8.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0500928882CE8006EEF3D /* hair8.rcproject */; };
+		4DA0500E28883CE8006EEF3D /* hair7.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0500D28883CE8006EEF3D /* hair7.rcproject */; };
 		4DD2E3E92887ED150046FD7A /* hair1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2E3E82887ED150046FD7A /* hair1.rcproject */; };
 		4DD2E3EB2887ED430046FD7A /* hair2.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2E3EA2887ED430046FD7A /* hair2.rcproject */; };
 		4DD2E3ED2887ED860046FD7A /* hair3.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2E3EC2887ED860046FD7A /* hair3.rcproject */; };
@@ -66,6 +67,7 @@
 		4D3A285B28863FB100CBA859 /* glasses6.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses6.rcproject; sourceTree = "<group>"; };
 		4D3A285D28863FD600CBA859 /* glasses7.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses7.rcproject; sourceTree = "<group>"; };
 		4DA0500928882CE8006EEF3D /* hair8.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair8.rcproject; sourceTree = "<group>"; };
+		4DA0500D28883CE8006EEF3D /* hair7.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair7.rcproject; sourceTree = "<group>"; };
 		4DD2E3E82887ED150046FD7A /* hair1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair1.rcproject; sourceTree = "<group>"; };
 		4DD2E3EA2887ED430046FD7A /* hair2.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair2.rcproject; sourceTree = "<group>"; };
 		4DD2E3EC2887ED860046FD7A /* hair3.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair3.rcproject; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				4DD2E3EA2887ED430046FD7A /* hair2.rcproject */,
 				4DD2E3EC2887ED860046FD7A /* hair3.rcproject */,
 				4DD2E3EE2887EDBE0046FD7A /* hair4.rcproject */,
+				4DA0500D28883CE8006EEF3D /* hair7.rcproject */,
 				4DA0500928882CE8006EEF3D /* hair8.rcproject */,
 				4DD2E3F02887F2F40046FD7A /* hair11.rcproject */,
 			);
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA0500E28883CE8006EEF3D /* hair7.rcproject in Sources */,
 				4D3A2850288615C600CBA859 /* glasses1.rcproject in Sources */,
 				4D3A285E28863FD600CBA859 /* glasses7.rcproject in Sources */,
 				263585D02881DC5000828682 /* ContentView.swift in Sources */,
