@@ -18,6 +18,8 @@ struct ProfileView: View {
     
     var hair=["Oblong": ["Blount Bob","Oblong1","Oblong2"],"Round":["Long Wavy Layers","Textured Lob","Round1","Round2"], "Heart": ["Bangs","Heart1","Heart2"], "Oval": ["Old Hollywood Waves", "Oval1", "Oval2"], "Square": ["Angled Bob","Curly Bob", "Long and Voluminous","Tousled Lob","Diamond1","Diamond2"]]
       
+    
+    var beard=["Oblong": ["BOblong1","BOblong2","BOblong3"],"Round":["BRound1","BRound2","BRound3"], "Diamond": ["BDiamond1","BDiamond2","BDiamond3"], "Square": ["BSquare1","BSquare2","BSquare3"], "Round":["BRoud1","BRound2","BRound3"]]
     var body: some View {
         
 
@@ -51,7 +53,14 @@ struct ProfileView: View {
                 Image(immagine)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                        
                     
+                    }
+                    ForEach(beard[faceShape]! , id:\.self){
+                        iter in
+                        Image(iter)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                     }
                 }
                 
