@@ -24,11 +24,11 @@ struct ProfileView: View {
         
 
         
-        
+        ScrollView{
         VStack{
             
             
-        Image("ImmagineProfiloProva")
+        Image("Logo")
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 350, height: 350, alignment: .top)
@@ -40,33 +40,59 @@ struct ProfileView: View {
                 
             }.frame(width: 150, height: 50, alignment: .center).buttonStyle(.bordered)
             
-            Text("About your face Shape").bold().frame(alignment: .center)
+           Text("About your face Shape").bold().frame(alignment: .center)
             
-            Text("\(season[sca]!)")
+            Text(face[faceShape]!)
             
-            Text("Hair Styles").bold().frame(alignment: .center)
+            Text("About your Seasonal color analisys").bold().frame(alignment: .center)
+            
+            
+            Text(season[sca]!)
+            
+            
             
             ScrollView(.horizontal){
+                
+                VStack{
+                    Text("Hair Styles").bold().frame(alignment: .center)
                 HStack{
                     ForEach(hair[faceShape]! , id:\.self){
                         immagine in
                 Image(immagine)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(height: 100)
                         
                     
                     }
-                    ForEach(beard[faceShape]! , id:\.self){
-                        iter in
-                        Image(iter)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
+                    
+                }
+                            
+                            Section(header: Text("Beard")){
+                                HStack{
+                        ForEach(beard[faceShape]! , id:\.self){
+                            iter in
+                            Image(iter)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame( height:100)
+                        }
+                            
+                        
                     }
+                        
+                        
+                    }
+                
+                    
+
                 }
                 
             }
+            }
             
-            Spacer()
+        
+        
             
             
         }.padding(.horizontal, 5.0).navigationTitle(Text("Profilo")).navigationBarTitleDisplayMode(.inline).navigationBarItems( trailing: NavigationLink("AR",destination: ArView()))
@@ -80,3 +106,28 @@ struct ProfileView_Previews: PreviewProvider {
         ProfileView(face:"Heart",sc:"Winter")
     }
 }
+
+struct StickyHeader<Content: View>: View {
+var minHeight: CGFloat
+var content: Content
+init(minHeight: CGFloat = 200, @ViewBuilder content: () -> Content) {
+self.minHeight = minHeight
+self.content = content()
+}
+var body: some View {
+GeometryReader { geo in
+if(geo.frame(in: .global).minY <= 0) {
+content
+.frame(width: geo.size.width, height: geo.size.height, alignment: .center)
+} else {
+content
+.offset(y: -geo.frame(in: .global).minY)
+.frame(width: geo.size.width, height: geo.size.height + geo.frame(in: .global).minY)
+}
+}.frame(minHeight: minHeight)
+}
+}
+
+
+
+
