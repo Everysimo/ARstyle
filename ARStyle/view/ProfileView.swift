@@ -22,12 +22,15 @@ struct ProfileView: View {
       
     
     var beard=["Oblong": ["BOblong1","BOblong2","BOblong3"],"Round":["BRound1","BRound2","BRound3"], "Oval": ["BDiamond1","BDiamond2","BDiamond3"], "Square": ["BSquare1","BSquare2","BSquare3"], "Heart":["BRoud1","BRound2","BRound3"],"unknown":[],"":[]]
+    
+    @State private var isExp1:Bool = false
+    @State private var isExp2:Bool = false
+    
     var body: some View {
         
         
         ScrollView{
         VStack{
-            
             
         Image("Logo")
             .resizable()
@@ -37,65 +40,66 @@ struct ProfileView: View {
                 .fontWeight(.medium)
             Text("Seasonal Color Analysis: \(sca)")
                 .fontWeight(.medium)
-            Button(action:{}){Text("Scan")
-                
-            }.frame(width: 150, height: 50, alignment: .center).buttonStyle(.bordered)
+            Button(action: {
+            }) {
+                NavigationLink( destination: AnalyzeView()) {
+                Text("Scan your face")
+                }
+            }.buttonStyle(.bordered)
+                .font(.system(size: 25, weight: .bold, design: .rounded))
+                .foregroundColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
+                .background(Color(red: 3 / 255, green: 127 / 255, blue: 140 / 255))
             
-           Text("About your face Shape").bold().frame(alignment: .center)
+            DisclosureGroup("About your face Shape",isExpanded: $isExp1) {
+                VStack{
+                    Text(face[faceShape]!)
+                        .padding()
+                        .multilineTextAlignment(.center)
+                }
+            }.foregroundColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
+                .background(Color(red: 3 / 255, green: 127 / 255, blue: 140 / 255))
+                .accentColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
+                    .cornerRadius(8)
+                    .padding(.horizontal, 5.0)
             
-            Text(face[faceShape]!)
+            DisclosureGroup("About your Seasonal color analisys",isExpanded: $isExp2) {
+                VStack{
+                    Text(season[sca]!)
+                        .padding()
+                        .multilineTextAlignment(.center)
+                }
+            }.foregroundColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
+                .background(Color(red: 3 / 255, green: 127 / 255, blue: 140 / 255))
+                .accentColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
+                    .cornerRadius(8)
+                    .padding(.horizontal, 5.0)
             
-            Text("About your Seasonal color analisys").bold().frame(alignment: .center)
-            
-            
-            Text(season[sca]!)
-            
-            
-            
-            ScrollView(.horizontal){
-                
+            ScrollView(.vertical){
                 VStack{
                     Text("Hair Styles").bold().frame(alignment: .center)
-                HStack{
-                    ForEach(hair[faceShape]! , id:\.self){
-                        immagine in
-                Image(immagine)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 100)
-                        
-                    
+                    ScrollView(){
+                        HStack{
+                            ForEach(hair[faceShape]! , id:\.self){
+                                immagine in
+                        Image(immagine)
+                            .resizable()
+                            .frame(width: 100, height: 120)
+                            }
+                        }
                     }
-                    
-                }
-                            
                             Section(header: Text("Beard")){
                                 HStack{
                         ForEach(beard[faceShape]! , id:\.self){
                             iter in
                             Image(iter)
                                 .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame( height:100)
+                                .frame(width: 100, height: 120)
                         }
-                            
-                        
                     }
-                        
-                        
-                    }
-                
-                    
-
                 }
-                
             }
             }
-            
-        
-        
-            
-            
+            }
         }.padding(.horizontal, 5.0).navigationTitle(Text("Profilo")).navigationBarTitleDisplayMode(.inline).navigationBarItems( trailing: NavigationLink("AR",destination: ArView()))
     
     }

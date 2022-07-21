@@ -22,13 +22,13 @@ struct WelcomePage: View {
         VStack(alignment: .center, content: {
             //logo
             VStack(alignment: .center, content: {
-                Image("Logo")
-                    .resizable()
-                    .frame(width: 100.0, height: 100.0)
                 VStack{
-                    Text("Discover your best look according to your Face shape with our Artificial Intelligence").multilineTextAlignment(.center).padding(.horizontal, 15.0).foregroundColor(Color(red: 36 / 255, green: 64 / 255, blue: 61 / 255))
+                    Text("Discover your best look according to your Face shape with our Artificial Intelligence").multilineTextAlignment(.center).padding(.horizontal, 15.0).foregroundColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
                         .font(.system(size: 17, weight: .bold, design: .default))
-                }
+                }.frame(width: .infinity, height: 80)
+                    .background(Color(red: 72 / 255, green: 202 / 255, blue: 217 / 255))
+                    .cornerRadius(15)
+    
                 //Face Shape images
                 LazyVGrid(columns:columns1,
                     alignment: .center, spacing: 1) {
@@ -66,6 +66,8 @@ struct WelcomePage: View {
                 }
                     .padding(.bottom, 20.0)
             })
+            .padding(.horizontal)
+            
             LazyVGrid(columns:columns2,
                 alignment: .center, spacing: 2) {
                 VStack{
@@ -116,11 +118,22 @@ struct WelcomePage: View {
                     .background(Color(red: 72 / 255, green: 202 / 255, blue: 217 / 255))
                     .cornerRadius(15)
         }
-            Text("Upgrade your look now").multilineTextAlignment(.center).padding(.top, 25.0)
-            NavigationLink("Scan your face", destination: AnalyzeView())
-        })
+            Text("Upgrade your look now").multilineTextAlignment(.center).padding()
+                .font(.system(size: 25, weight: .bold, design: .rounded))
+            Button(action: {
+            }) {
+                NavigationLink( destination: AnalyzeView()) {
+                Text("Scan your face")
+                }
+            }.buttonStyle(.bordered)
+                .font(.system(size: 25, weight: .bold, design: .rounded))
+                .foregroundColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
+                .background(Color(red: 3 / 255, green: 127 / 255, blue: 140 / 255))
+        }).frame(width: .infinity, height: .infinity)
+            .navigationTitle(Text("About the app")).navigationBarTitleDisplayMode(.inline).navigationBarItems( trailing: NavigationLink("Scan",destination: AnalyzeView()))
+        }
     }
-}
+
 
 struct WelcomePage_Previews: PreviewProvider {
     static var previews: some View {

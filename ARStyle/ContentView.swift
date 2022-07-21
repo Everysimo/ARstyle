@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView : View {
     @StateObject var imageModel = ImageModel()
     @AppStorage("usersFirstLaunch") var userFirstLaunch:Bool = false
-    @StateObject()var cameraModel = CameraModel()
     
     var body: some View {
         NavigationView {
@@ -19,7 +18,7 @@ struct ContentView : View {
             } else {
                 WelcomePage()
             }
-        }.environmentObject(cameraModel).environmentObject(imageModel)
+        }.environmentObject(imageModel)
     }
 }
 

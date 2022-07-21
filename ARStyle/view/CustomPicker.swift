@@ -9,11 +9,12 @@ import SwiftUI
 
 struct CustomPicker : View {
     
-    var img = ["square.and.arrow.up","square.and.arrow.down","square.and.arrow.up.on.square","square.and.arrow.down.on.square","cursorarrow.and.square.on.square.dashed"]
+    var img = ["long-wavy-hair-variant","cosmetics","sunglasses","mustache-with-beard"]
 
     @Binding var imgSelect:Int
     @State var offSetX:Double = 78.0
     @State var oldOffSet:Double = 78.0
+    
     
     init(imgSelect:Binding<Int>){
         self._imgSelect=imgSelect
@@ -21,14 +22,14 @@ struct CustomPicker : View {
     var body: some View {
         ZStack{
             LazyHGrid(rows: [GridItem()]){
-                Image("")
+                Image("glasses")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .padding(.all, 15.0)
                         .clipShape(Circle())
                         .frame(width: 63.0, height: 63)
                         .padding(.horizontal, 5)
-                Image("")
+                Image("glasses")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .padding(.all, 15.0)
@@ -37,7 +38,7 @@ struct CustomPicker : View {
                         .padding(.horizontal, 5)
                 ForEach(img, id: \.self){
                     item  in
-                    Image(systemName: item)
+                    Image(item)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .padding(.all, 15.0)
@@ -90,4 +91,3 @@ struct CustomPicker : View {
         }
     }
 }
-
