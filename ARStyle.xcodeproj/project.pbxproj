@@ -139,11 +139,8 @@
 		263585CC2881DC5000828682 /* ARStyle */ = {
 			isa = PBXGroup;
 			children = (
-
 				4DC82FF3288893C100306C9D /* Info.plist */,
-
 				60DB7F83288875AE009F391E /* data */,
-
 				4DC82FF02888479100306C9D /* view */,
 				4D3A284A2886151D00CBA859 /* model */,
 				263585CD2881DC5000828682 /* AppDelegate.swift */,
@@ -208,11 +205,8 @@
 		4DC82FF02888479100306C9D /* view */ = {
 			isa = PBXGroup;
 			children = (
-
-				4DC82FF1288847D200306C9D /* SplashScreen.swift */,
 				60DB7F81288870DC009F391E /* GalleryView.swift */,
 				60DB7F8828887E60009F391E /* ImageView.swift */,
-
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -538,7 +532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ARStyle/Preview Content\"";
-				DEVELOPMENT_TEAM = 5352V4L2B4;
+				DEVELOPMENT_TEAM = ZV797L94F3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARStyle/Info.plist;
@@ -555,7 +549,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.everysimo.ARStyle2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.everysimo.ARStyleAntonio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -572,7 +566,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ARStyle/Preview Content\"";
-				DEVELOPMENT_TEAM = 5352V4L2B4;
+				DEVELOPMENT_TEAM = ZV797L94F3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARStyle/Info.plist;
@@ -589,7 +583,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.everysimo.ARStyle2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.everysimo.ARStyleAntonio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
