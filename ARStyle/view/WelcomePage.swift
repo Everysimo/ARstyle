@@ -104,9 +104,8 @@ struct WelcomePage: View {
                     .cornerRadius(15)
         }
             Text("Upgrade your look now").multilineTextAlignment(.center).padding(.top, 25.0)
-            Button("Scan your face", action: {
-            }).buttonStyle(.bordered).padding()
-        }).frame(width: .infinity, height: .infinity)
+            NavigationLink("Scan your face", destination: AnalyzeView())
+        })
     }
 }
 

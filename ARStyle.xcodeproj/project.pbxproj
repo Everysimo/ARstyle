@@ -15,6 +15,7 @@
 		263585EB2881DC5300828682 /* ARStyleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585EA2881DC5300828682 /* ARStyleUITests.swift */; };
 		263585ED2881DC5300828682 /* ARStyleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585EC2881DC5300828682 /* ARStyleUITestsLaunchTests.swift */; };
 		26AD682128884CFF0061EAB1 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AD682028884CFF0061EAB1 /* WelcomePage.swift */; };
+		4D24CF852888D94900B23148 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24CF842888D94900B23148 /* CameraModel.swift */; };
 		4D3A2850288615C600CBA859 /* glasses1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A284F288615C600CBA859 /* glasses1.rcproject */; };
 		4D3A2852288616CF00CBA859 /* glasses2.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A2851288616CF00CBA859 /* glasses2.rcproject */; };
 		4D3A2854288624D400CBA859 /* glasses3.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A2853288624D400CBA859 /* glasses3.rcproject */; };
@@ -22,6 +23,11 @@
 		4D3A285A28863F2C00CBA859 /* glasses5.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A285928863F2C00CBA859 /* glasses5.rcproject */; };
 		4D3A285C28863FB100CBA859 /* glasses6.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A285B28863FB100CBA859 /* glasses6.rcproject */; };
 		4D3A285E28863FD600CBA859 /* glasses7.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A285D28863FD600CBA859 /* glasses7.rcproject */; };
+		4D5109F5288948BF00A3FBB7 /* MLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5109F4288948BF00A3FBB7 /* MLModel.swift */; };
+		4D5109F7288957CF00A3FBB7 /* PhototypeClassifier.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4D5109F6288957CE00A3FBB7 /* PhototypeClassifier.mlkitmodel */; };
+		4D5109F928895BE200A3FBB7 /* AnalyzeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5109F828895BE200A3FBB7 /* AnalyzeView.swift */; };
+		4D5109FB28895BED00A3FBB7 /* MakeUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5109FA28895BED00A3FBB7 /* MakeUpView.swift */; };
+		4D5109FD28897DFE00A3FBB7 /* FaceShapeClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4D5109FC28897DFD00A3FBB7 /* FaceShapeClassifier.mlmodel */; };
 		4DA0500A28882CE8006EEF3D /* hair8.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0500928882CE8006EEF3D /* hair8.rcproject */; };
 		4DA0500E28883CE8006EEF3D /* hair7.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0500D28883CE8006EEF3D /* hair7.rcproject */; };
 		4DA0501028883DE8006EEF3D /* hair9.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0500F28883DE8006EEF3D /* hair9.rcproject */; };
@@ -31,6 +37,8 @@
 		4DD2E3ED2887ED860046FD7A /* hair3.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2E3EC2887ED860046FD7A /* hair3.rcproject */; };
 		4DD2E3EF2887EDBE0046FD7A /* hair4.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2E3EE2887EDBE0046FD7A /* hair4.rcproject */; };
 		4DD2E3F12887F2F40046FD7A /* hair11.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2E3F02887F2F40046FD7A /* hair11.rcproject */; };
+		4DDC58002888C1A700A7630D /* ArView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC57FF2888C1A700A7630D /* ArView.swift */; };
+		4DDC58042888D53000A7630D /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC58032888D53000A7630D /* ScanView.swift */; };
 		4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE01945288567E7004FEDDD /* CustomPicker.swift */; };
 		60DB7F82288870DC009F391E /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB7F81288870DC009F391E /* GalleryView.swift */; };
 		60DB7F85288875FB009F391E /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB7F84288875FB009F391E /* ImageModel.swift */; };
@@ -67,6 +75,7 @@
 		263585EA2881DC5300828682 /* ARStyleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARStyleUITests.swift; sourceTree = "<group>"; };
 		263585EC2881DC5300828682 /* ARStyleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARStyleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		26AD682028884CFF0061EAB1 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		4D24CF842888D94900B23148 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		4D3A284F288615C600CBA859 /* glasses1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses1.rcproject; sourceTree = "<group>"; };
 		4D3A2851288616CF00CBA859 /* glasses2.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses2.rcproject; sourceTree = "<group>"; };
 		4D3A2853288624D400CBA859 /* glasses3.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses3.rcproject; sourceTree = "<group>"; };
@@ -74,6 +83,11 @@
 		4D3A285928863F2C00CBA859 /* glasses5.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses5.rcproject; sourceTree = "<group>"; };
 		4D3A285B28863FB100CBA859 /* glasses6.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses6.rcproject; sourceTree = "<group>"; };
 		4D3A285D28863FD600CBA859 /* glasses7.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses7.rcproject; sourceTree = "<group>"; };
+		4D5109F4288948BF00A3FBB7 /* MLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLModel.swift; sourceTree = "<group>"; };
+		4D5109F6288957CE00A3FBB7 /* PhototypeClassifier.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PhototypeClassifier.mlkitmodel; sourceTree = "<group>"; };
+		4D5109F828895BE200A3FBB7 /* AnalyzeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeView.swift; sourceTree = "<group>"; };
+		4D5109FA28895BED00A3FBB7 /* MakeUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeUpView.swift; sourceTree = "<group>"; };
+		4D5109FC28897DFD00A3FBB7 /* FaceShapeClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FaceShapeClassifier.mlmodel; sourceTree = "<group>"; };
 		4DA0500928882CE8006EEF3D /* hair8.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair8.rcproject; sourceTree = "<group>"; };
 		4DA0500D28883CE8006EEF3D /* hair7.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair7.rcproject; sourceTree = "<group>"; };
 		4DA0500F28883DE8006EEF3D /* hair9.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair9.rcproject; sourceTree = "<group>"; };
@@ -84,6 +98,8 @@
 		4DD2E3EC2887ED860046FD7A /* hair3.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair3.rcproject; sourceTree = "<group>"; };
 		4DD2E3EE2887EDBE0046FD7A /* hair4.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair4.rcproject; sourceTree = "<group>"; };
 		4DD2E3F02887F2F40046FD7A /* hair11.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair11.rcproject; sourceTree = "<group>"; };
+		4DDC57FF2888C1A700A7630D /* ArView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArView.swift; sourceTree = "<group>"; };
+		4DDC58032888D53000A7630D /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		4DE01945288567E7004FEDDD /* CustomPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 		60DB7F81288870DC009F391E /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		60DB7F84288875FB009F391E /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
@@ -139,17 +155,15 @@
 		263585CC2881DC5000828682 /* ARStyle */ = {
 			isa = PBXGroup;
 			children = (
+				4D5109F12889484700A3FBB7 /* ml */,
 				4DC82FF3288893C100306C9D /* Info.plist */,
-				60DB7F83288875AE009F391E /* data */,
+				4D24CF832888D93200B23148 /* data */,
 				4DC82FF02888479100306C9D /* view */,
 				4D3A284A2886151D00CBA859 /* model */,
 				263585CD2881DC5000828682 /* AppDelegate.swift */,
 				263585CF2881DC5000828682 /* ContentView.swift */,
-				60F698F728885414006C63A6 /* ProfileView.swift */,
-				4DE01945288567E7004FEDDD /* CustomPicker.swift */,
 				263585D32881DC5200828682 /* Assets.xcassets */,
 				263585D52881DC5200828682 /* Preview Content */,
-				26AD682028884CFF0061EAB1 /* WelcomePage.swift */,
 				4DC82FF62888A38300306C9D /* Launch Screen.storyboard */,
 			);
 			path = ARStyle;
@@ -180,6 +194,16 @@
 			path = ARStyleUITests;
 			sourceTree = "<group>";
 		};
+		4D24CF832888D93200B23148 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				60DB7F84288875FB009F391E /* ImageModel.swift */,
+				4D24CF842888D94900B23148 /* CameraModel.swift */,
+				4D5109F4288948BF00A3FBB7 /* MLModel.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		4D3A284A2886151D00CBA859 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,21 +226,29 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		4D5109F12889484700A3FBB7 /* ml */ = {
+			isa = PBXGroup;
+			children = (
+				4D5109F6288957CE00A3FBB7 /* PhototypeClassifier.mlkitmodel */,
+				4D5109FC28897DFD00A3FBB7 /* FaceShapeClassifier.mlmodel */,
+			);
+			path = ml;
+			sourceTree = "<group>";
+		};
 		4DC82FF02888479100306C9D /* view */ = {
 			isa = PBXGroup;
 			children = (
 				60DB7F81288870DC009F391E /* GalleryView.swift */,
 				60DB7F8828887E60009F391E /* ImageView.swift */,
+				4D5109FA28895BED00A3FBB7 /* MakeUpView.swift */,
+				4D5109F828895BE200A3FBB7 /* AnalyzeView.swift */,
+				26AD682028884CFF0061EAB1 /* WelcomePage.swift */,
+				60F698F728885414006C63A6 /* ProfileView.swift */,
+				4DE01945288567E7004FEDDD /* CustomPicker.swift */,
+				4DDC57FF2888C1A700A7630D /* ArView.swift */,
+				4DDC58032888D53000A7630D /* ScanView.swift */,
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		60DB7F83288875AE009F391E /* data */ = {
-			isa = PBXGroup;
-			children = (
-				60DB7F84288875FB009F391E /* ImageModel.swift */,
-			);
-			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,9 +386,13 @@
 				4D3A2850288615C600CBA859 /* glasses1.rcproject in Sources */,
 				4D3A285E28863FD600CBA859 /* glasses7.rcproject in Sources */,
 				26AD682128884CFF0061EAB1 /* WelcomePage.swift in Sources */,
+				4D5109FB28895BED00A3FBB7 /* MakeUpView.swift in Sources */,
+				4D5109F5288948BF00A3FBB7 /* MLModel.swift in Sources */,
 				263585D02881DC5000828682 /* ContentView.swift in Sources */,
 				60DB7F85288875FB009F391E /* ImageModel.swift in Sources */,
+				4DDC58042888D53000A7630D /* ScanView.swift in Sources */,
 				4D3A28582886358900CBA859 /* glasses4.rcproject in Sources */,
+				4DDC58002888C1A700A7630D /* ArView.swift in Sources */,
 				4DD2E3ED2887ED860046FD7A /* hair3.rcproject in Sources */,
 				4DA0500A28882CE8006EEF3D /* hair8.rcproject in Sources */,
 				60DB7F82288870DC009F391E /* GalleryView.swift in Sources */,
@@ -366,10 +402,14 @@
 				60DB7F8928887E60009F391E /* ImageView.swift in Sources */,
 				4DD2E3EB2887ED430046FD7A /* hair2.rcproject in Sources */,
 				4DD2E3EF2887EDBE0046FD7A /* hair4.rcproject in Sources */,
+				4D5109F7288957CF00A3FBB7 /* PhototypeClassifier.mlkitmodel in Sources */,
 				4D3A2854288624D400CBA859 /* glasses3.rcproject in Sources */,
 				263585CE2881DC5000828682 /* AppDelegate.swift in Sources */,
 				4DD2E3F12887F2F40046FD7A /* hair11.rcproject in Sources */,
 				4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */,
+				4D5109FD28897DFE00A3FBB7 /* FaceShapeClassifier.mlmodel in Sources */,
+				4D5109F928895BE200A3FBB7 /* AnalyzeView.swift in Sources */,
+				4D24CF852888D94900B23148 /* CameraModel.swift in Sources */,
 				60F698F828885414006C63A6 /* ProfileView.swift in Sources */,
 				4DA0501028883DE8006EEF3D /* hair9.rcproject in Sources */,
 				4DD2E3E92887ED150046FD7A /* hair1.rcproject in Sources */,
@@ -532,7 +572,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ARStyle/Preview Content\"";
-				DEVELOPMENT_TEAM = ZV797L94F3;
+				DEVELOPMENT_TEAM = J257UR7L85;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARStyle/Info.plist;
@@ -549,7 +589,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.everysimo.ARStyleAntonio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.everysimo.ARStyleDaniele;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -566,7 +606,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ARStyle/Preview Content\"";
-				DEVELOPMENT_TEAM = ZV797L94F3;
+				DEVELOPMENT_TEAM = J257UR7L85;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARStyle/Info.plist;
@@ -583,7 +623,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.everysimo.ARStyleAntonio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.everysimo.ARStyleDaniele;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -11,10 +11,13 @@ struct CustomPicker : View {
     
     var img = ["square.and.arrow.up","square.and.arrow.down","square.and.arrow.up.on.square","square.and.arrow.down.on.square","cursorarrow.and.square.on.square.dashed"]
 
-    @State var imgSelect:Int = 0
+    @Binding var imgSelect:Int
     @State var offSetX:Double = 78.0
     @State var oldOffSet:Double = 78.0
     
+    init(imgSelect:Binding<Int>){
+        self._imgSelect=imgSelect
+    }
     var body: some View {
         ZStack{
             LazyHGrid(rows: [GridItem()]){
@@ -88,10 +91,3 @@ struct CustomPicker : View {
     }
 }
 
-#if DEBUG
-struct CustomPicker_Previews : PreviewProvider {
-    static var previews: some View {
-        CustomPicker()
-    }
-}
-#endif
