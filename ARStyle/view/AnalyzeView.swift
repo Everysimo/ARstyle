@@ -11,10 +11,10 @@ import ARKit
 
 struct AnalyzeView : View {
     var camera=CameraModel()
-    @State var propId:Int=1000
+    @State var object:Int=1000
     var body: some View {
             ZStack(alignment: .bottom){
-                ARViewContainer(propId:  $propId).edgesIgnoringSafeArea(.all)
+                ARViewContainer(object:  $object, type: $object, color: $object).edgesIgnoringSafeArea(.all)
                 VStack{
                     Text("Take a selfie in a well-lit environment to analyze your face!")
                         .multilineTextAlignment(.center)

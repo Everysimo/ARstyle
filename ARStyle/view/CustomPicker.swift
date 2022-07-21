@@ -7,86 +7,109 @@
 
 import SwiftUI
 
-struct CustomPicker : View {
-    
-    var img = ["long-wavy-hair-variant","cosmetics","sunglasses","mustache-with-beard"]
+extension Color {
+  init(hex: UInt, alpha: Double = 1) {
+    self.init(
+      .sRGB,
+      red: Double((hex >> 16) & 0xFF) / 255,
+      green: Double((hex >> 8) & 0xFF) / 255,
+      blue: Double(hex & 0xFF) / 255,
+      opacity: alpha
+    )
+  }
+}
 
-    @Binding var imgSelect:Int
-    @State var offSetX:Double = 78.0
-    @State var oldOffSet:Double = 78.0
+struct CustomPicker : View {
+    @AppStorage("faceShape") var faceShape:String=""
+    var imgObject = ["sunglasses","long-wavy-hair-variant"]
+    var imgType = [0:["1.circle.fill","2.circle.fill","3.circle.fill","4.circle.fill","5.circle.fill","6.circle.fill","7.circle.fill"],1:["1.circle.fill","2.circle.fill","3.circle.fill","4.circle.fill","5.circle.fill","6.circle.fill","7.circle.fill","8.circle.fill"]]
+    var imgColor = [0:[0x424D04,0xD74524,0x71A9E1,0xD33470,0x000000,0x0E64B7,0xB32B53,0xFF7276,0x2E8D9B],1:[0xf4e9ea,0xb06500,0xe67451,0xff6700,0xc97944,0xaf8057,0xc3705f, 0xd26911, 0x9b111e, 0xdc143c,0xb73f45,0x7c2d37,0x8a4931,0xff66cc,0xe6e6fa,0xa0522d,0xc04000,0x9d7651,0x3f0fb7,0xb284be,0xde5940,0x7fffd4,0x303030,0x0e0e10,0x040720,0xfe019a,0xde5d83,0xe5e4e2,0xccff00,0x028f1e,0x89cff0,0x1a0076]]
+    var p1=["Oblong": [1,5], "Oval": [3,7], "Square": [2,4], "Heart":[6,3],"unknown":[],"":[]]
+    var p2=["Oblong": [3,5], "Oval": [2,7], "Square": [4,8], "Heart":[1,6],"unknown":[],"":[]]
+    @Binding var object:Int
+    @Binding var type:Int
+    @Binding var color:Int
+    @State var showingPopup:Bool=false
+    @State var showingColor:Bool=false
+
     
-    
-    init(imgSelect:Binding<Int>){
-        self._imgSelect=imgSelect
+    init(object: Binding<Int>, type: Binding<Int>, color: Binding<Int>){
+        self._object=object
+        self._type=type
+        self._color=color
     }
     var body: some View {
-        ZStack{
-            LazyHGrid(rows: [GridItem()]){
-                Image("glasses")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(width: 63.0, height: 63)
-                        .padding(.horizontal, 5)
-                Image("glasses")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 15.0)
-                        .clipShape(Circle())
-                        .frame(width: 63.0, height: 63)
-                        .padding(.horizontal, 5)
-                ForEach(img, id: \.self){
-                    item  in
-                    Image(item)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding(.all, 15.0)
-                            .clipShape(Circle())
-                            .frame(width: 63.0, height: 63.0)
-                            .padding(.horizontal, 5)
+        VStack{
+            ScrollView(.horizontal, showsIndicators: false){
+                if(showingColor){
+                    HStack{
+                        ForEach(0..<imgColor[object]!.count, id:\.self) {
+                            id in
+                            Button(action: {
+                                color=id
+                                showingColor.toggle()
+                                showingPopup.toggle()
+                            }){
+                                Image("").resizable()
+                                    .padding(7.0)
+                                    .frame(width: 63.0, height: 63.0)
+                                        
+                            }.buttonStyle(PlainButtonStyle()).background(Color(hex: UInt(imgColor[object]![id]))).clipShape(Circle()).padding(.horizontal, 7.0)
+                                .frame(width: 63.0, height: 63.0)
+                        }
+                    }
                 }
             }
-            .contentShape(Rectangle())
-            .frame(height: 50)
-            .offset(x: offSetX, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
-            .gesture(
-                DragGesture(minimumDistance: 0, coordinateSpace: .local)
-                    .onChanged { gesture in
-                        if(gesture.translation.width<0){
-                            if(!((imgSelect-img.count+1)==0)){
-                                if((oldOffSet-79)<(offSetX-10)){
-                                    offSetX = offSetX - 10
+            ScrollView(.horizontal, showsIndicators: false){
+                if(showingPopup){
+                    HStack{
+                        ForEach(0..<imgType[object]!.count, id:\.self) {
+                            id in
+                            Button(action: {
+                                if(showingColor && type==id){
+                                    showingColor.toggle()
+                                }else if(!showingColor){
+                                    showingColor.toggle()
                                 }
-                            }
-                        }else if(gesture.translation.width>0){
-                            if(!(imgSelect==0)){
-                                if((oldOffSet+79)>(offSetX+10)){
-                                    offSetX = offSetX + 10
+                                type=id
+                            }){
+                                if(object==0 && p1[faceShape]!.contains(id)){
+                                    Image(systemName: imgType[object]![id]).resizable()
+                                        .frame(width: 63.0, height: 63.0).clipShape(Circle()).overlay(Circle().stroke(Color.yellow,lineWidth:4))
+                                }else if(object==1 && p2[faceShape]!.contains(id)){
+                                    Image(systemName: imgType[object]![id]).resizable()
+                                        .frame(width: 63.0, height: 63.0).clipShape(Circle()).overlay(Circle().stroke(Color.yellow,lineWidth:4))
+                                }else{
+                                    Image(systemName: imgType[object]![id]).resizable()
+                                        .frame(width: 63.0, height: 63.0)
                                 }
                             }
                         }
                     }
-                    .onEnded {
-                        gesture in
-                        if(gesture.translation.width<0){
-                            if(!((imgSelect-img.count+1)==0)){
-                                imgSelect=imgSelect+1
-                                offSetX = oldOffSet - 79
+                }
+            }
+            HStack{
+                Spacer()
+                ForEach(0..<imgObject.count, id:\.self) {
+                    id in
+                    Button(action: {
+                        if(showingPopup && object==id){
+                            if(showingColor){
+                                showingColor.toggle()
                             }
-                        }else if(gesture.translation.width>0){
-                            if(!(imgSelect==0)){
-                                imgSelect=imgSelect-1
-                                offSetX = oldOffSet + 79
-                            }
+                            showingPopup.toggle()
+                        }else if(!showingPopup){
+                            showingPopup.toggle()
                         }
-                        oldOffSet=offSetX
-                    }
-            )
-            HStack(){
-                Circle().stroke(Color.red,lineWidth:3)
-                    .frame(width: 63.0, height: 63.0)
-                    .offset(x: /*@START_MENU_TOKEN@*/-2.0/*@END_MENU_TOKEN@*/, y: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/)
+                        object=id
+                        
+                    }){
+                        Image(imgObject[id]).resizable()
+                            .padding(.horizontal, 7.0)
+                            .frame(width: 63.0, height: 63.0)
+                    }.buttonStyle(PlainButtonStyle()).background(Color.clear)
+                    Spacer()
+                }
             }
         }
     }
