@@ -13,9 +13,11 @@ var arView:ARView!
 
 struct ContentView : View {
     @State var propId:Int=0
+    @StateObject var imageModel = ImageModel()
     var body: some View {
         ZStack(alignment: .bottom){
             ARViewContainer(propId:  $propId).edgesIgnoringSafeArea(.all)
+
             VStack{
                 HStack{
                     Spacer()
@@ -40,7 +42,8 @@ struct ContentView : View {
                 }
                 CustomPicker()
             }
-        }
+        
+        }.environmentObject(imageModel)
     }
     func takeSnapshot(){
         arView.snapshot(saveToHDR: false){
