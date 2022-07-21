@@ -78,15 +78,15 @@ struct WelcomePage: View {
                     .cornerRadius(15)
                 LazyVGrid(columns:columns4, spacing: 2){
                     LazyHGrid(rows:columns4, spacing: 2) {
-                        Image("ShutterButton").resizable()
+                        Image("long-wavy-hair-variant").resizable()
                             .frame(width: 90.0, height: 90.0)
-                        Image("ShutterButton").resizable()
+                        Image("cosmetics").resizable()
                             .frame(width: 90.0, height: 90.0)
                     }
                     LazyHGrid(rows:columns4, spacing: 2) {
-                        Image("ShutterButton").resizable()
+                        Image("sunglasses").resizable()
                             .frame(width: 90.0, height: 90.0)
-                        Image("ShutterButton").resizable()
+                        Image("mustache-with-beard").resizable()
                             .frame(width: 90.0, height: 90.0)
                     }
                 }
