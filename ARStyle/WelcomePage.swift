@@ -22,9 +22,12 @@ struct WelcomePage: View {
         VStack(alignment: .center, content: {
             //logo
             VStack(alignment: .center, content: {
-                Image("ShutterButton").frame( alignment: .top)
+                Image("Logo")
+                    .resizable()
+                    .frame(width: 100.0, height: 100.0)
                 VStack{
-                    Text("Discover your best look according to your Face shape with our Artificial Intelligence").multilineTextAlignment(.center).padding(.horizontal, 15.0)
+                    Text("Discover your best look according to your Face shape with our Artificial Intelligence").multilineTextAlignment(.center).padding(.horizontal, 15.0).foregroundColor(Color(red: 36 / 255, green: 64 / 255, blue: 61 / 255))
+                        .font(.system(size: 17, weight: .bold, design: .default))
                 }
                 //Face Shape images
                 LazyVGrid(columns:columns1,
@@ -33,26 +36,32 @@ struct WelcomePage: View {
                         Image("oblong").resizable()
                             .frame(width: 70.0, height: 70.0)
                         Text("Oblong")
+                            .foregroundColor(Color(red: 36 / 255, green: 64 / 255, blue: 61 / 255))
+                            .font(.system(size: 15, weight: .bold, design: .default))
                     }
                     VStack(alignment: .center, spacing: 0) {
                         Image("oval").resizable()
                             .frame(width: 70.0, height: 70.0)
-                        Text("Oval")
+                        Text("Oval").foregroundColor(Color(red: 36 / 255, green: 64 / 255, blue: 61 / 255))
+                            .font(.system(size: 15, weight: .bold, design: .default))
                     }
                     VStack(alignment: .center, spacing: 0) {
                         Image("heart").resizable()
                             .frame(width: 70.0, height: 70.0)
-                        Text("Heart")
+                        Text("Heart").foregroundColor(Color(red: 36 / 255, green: 64 / 255, blue: 61 / 255))
+                            .font(.system(size: 15, weight: .bold, design: .default))
                     }
                     VStack(alignment: .center, spacing: 0) {
                         Image("round").resizable()
                             .frame(width: 70.0, height: 70.0)
-                        Text("Rounded")
+                        Text("Rounded").foregroundColor(Color(red: 36 / 255, green: 64 / 255, blue: 61 / 255))
+                            .font(.system(size: 15, weight: .bold, design: .default))
                     }
                     VStack(alignment: .center, spacing: 0) {
                         Image("square").resizable()
                             .frame(width: 70.0, height: 70.0)
-                        Text("Square")
+                        Text("Square").foregroundColor(Color(red: 36 / 255, green: 64 / 255, blue: 61 / 255))
+                            .font(.system(size: 15, weight: .bold, design: .default))
                     }
                 }
                     .padding(.bottom, 20.0)
@@ -62,8 +71,10 @@ struct WelcomePage: View {
                 VStack{
                     Text("Try new looks with the power of Augmented Reality").multilineTextAlignment(.center)
                         .padding()
+                        .foregroundColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
+                        .font(.system(size: 20, weight: .bold, design: .default))
                 }.frame(width: 180, height: 180)
-                    .background(Color.purple)
+                    .background(Color(red: 72 / 255, green: 202 / 255, blue: 217 / 255))
                     .cornerRadius(15)
                 LazyVGrid(columns:columns4, spacing: 2){
                     LazyHGrid(rows:columns4, spacing: 2) {
@@ -99,13 +110,21 @@ struct WelcomePage: View {
                 VStack{
                     Text("Discover your Seasonal Color Analysis").multilineTextAlignment(.center)
                         .padding()
+                        .font(.system(size: 20, weight: .bold, design: .default))
+                        .foregroundColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
                 }.frame(width: 180, height: 180)
-                    .background(Color.purple)
+                    .background(Color(red: 72 / 255, green: 202 / 255, blue: 217 / 255))
                     .cornerRadius(15)
         }
             Text("Upgrade your look now").multilineTextAlignment(.center).padding(.top, 25.0)
+                .foregroundColor(Color(red: 36 / 255, green: 64 / 255, blue: 61 / 255))
+                .font(.system(size: 20, weight: .bold, design: .default))
+                .frame(width: .infinity, alignment: .center)
             Button("Scan your face", action: {
-            }).buttonStyle(.bordered).padding()
+            }).buttonStyle(.bordered)
+                .font(.system(size: 25, weight: .bold, design: .default))
+                .foregroundColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
+                .background(Color(red: 72 / 255, green: 202 / 255, blue: 217 / 255))
         }).frame(width: .infinity, height: .infinity)
     }
 }
