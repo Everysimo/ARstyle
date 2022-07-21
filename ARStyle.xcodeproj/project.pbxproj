@@ -39,7 +39,6 @@
 		4DD2E3EF2887EDBE0046FD7A /* hair4.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2E3EE2887EDBE0046FD7A /* hair4.rcproject */; };
 		4DD2E3F12887F2F40046FD7A /* hair11.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2E3F02887F2F40046FD7A /* hair11.rcproject */; };
 		4DDC58002888C1A700A7630D /* ArView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC57FF2888C1A700A7630D /* ArView.swift */; };
-		4DDC58042888D53000A7630D /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC58032888D53000A7630D /* ScanView.swift */; };
 		4DE01946288567E7004FEDDD /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE01945288567E7004FEDDD /* CustomPicker.swift */; };
 		60DB7F82288870DC009F391E /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB7F81288870DC009F391E /* GalleryView.swift */; };
 		60DB7F85288875FB009F391E /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB7F84288875FB009F391E /* ImageModel.swift */; };
@@ -101,7 +100,6 @@
 		4DD2E3EE2887EDBE0046FD7A /* hair4.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair4.rcproject; sourceTree = "<group>"; };
 		4DD2E3F02887F2F40046FD7A /* hair11.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair11.rcproject; sourceTree = "<group>"; };
 		4DDC57FF2888C1A700A7630D /* ArView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArView.swift; sourceTree = "<group>"; };
-		4DDC58032888D53000A7630D /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		4DE01945288567E7004FEDDD /* CustomPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 		60DB7F81288870DC009F391E /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		60DB7F84288875FB009F391E /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
@@ -249,7 +247,6 @@
 				60F698F728885414006C63A6 /* ProfileView.swift */,
 				4DE01945288567E7004FEDDD /* CustomPicker.swift */,
 				4DDC57FF2888C1A700A7630D /* ArView.swift */,
-				4DDC58032888D53000A7630D /* ScanView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -393,7 +390,6 @@
 				4D5109F5288948BF00A3FBB7 /* MLModel.swift in Sources */,
 				263585D02881DC5000828682 /* ContentView.swift in Sources */,
 				60DB7F85288875FB009F391E /* ImageModel.swift in Sources */,
-				4DDC58042888D53000A7630D /* ScanView.swift in Sources */,
 				4D3A28582886358900CBA859 /* glasses4.rcproject in Sources */,
 				4DDC58002888C1A700A7630D /* ArView.swift in Sources */,
 				4DD2E3ED2887ED860046FD7A /* hair3.rcproject in Sources */,
@@ -593,6 +589,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.everysimo.ARStyle2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -627,7 +624,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.everysimo.ARStyle2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.everysimo.ARStyleDaniele;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
