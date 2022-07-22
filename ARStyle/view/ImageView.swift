@@ -8,14 +8,12 @@
 import SwiftUI
 import UIKit
 struct ImageView: View {
-    let size: Double
     let item: UIImage
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            Image(uiImage:item)
+            Image(uiImage:item).resizable()
             }
-            .frame(width: size, height: size)
         }
     }
 
@@ -23,7 +21,7 @@ struct ImageView: View {
 struct GridItemView_Previews: PreviewProvider {
     static var previews: some View {
         
-        ImageView(size: 50, item:UIImage(imageLiteralResourceName: "Round1"))
+        ImageView(item:UIImage(imageLiteralResourceName: "Round1"))
         
     }
 }

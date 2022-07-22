@@ -14,6 +14,10 @@ class ImageModel: ObservableObject {
     
     var imageArray: [UIImage] = []
     
+    init(){
+        getImageFromDocumentDirectory()
+    }
+    
     func getDirectoryPath() -> NSURL {
         let path = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("ARstyleImages")
         let url = NSURL(string: path)
@@ -31,6 +35,9 @@ class ImageModel: ObservableObject {
         let urlString: String = imagePath!.absoluteString
         let imageData = image.jpegData(compressionQuality: 0.5)
         fileManager.createFile(atPath: urlString as String, contents: imageData, attributes: nil)
+        imageArray.append(image)
+        UserDefaults.standard.set(nphoto+1, forKey: "photoTake")
+        print("foto salvata")
     }
     
     func configureDirectory() -> String {
@@ -53,5 +60,6 @@ class ImageModel: ObservableObject {
                 imageArray.append(image!)
             }
         }
+        print(imageArray.count)
     }
 }

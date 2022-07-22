@@ -96,7 +96,7 @@ struct ProfileView: View {
             }
             }
             
-        }.padding(.horizontal, 5.0).navigationTitle(Text("Profilo")).navigationBarTitleDisplayMode(.inline)
+        }.padding(.horizontal, 5.0).navigationTitle(Text("Profilo")).navigationBarTitleDisplayMode(.inline).navigationBarItems(trailing: NavigationLink("Gallery",destination: GalleryView()))
     
     }
     

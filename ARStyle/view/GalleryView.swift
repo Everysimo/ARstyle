@@ -26,7 +26,10 @@ struct GalleryView: View {
             ScrollView {
                 LazyVGrid(columns: gridColumns) {
                     ForEach(imageModel.imageArray, id: \.self) { item in
-                        Image(uiImage:item)
+                        NavigationLink(destination: ImageView(item: item), label: {
+                            Image(uiImage:item).resizable().aspectRatio(contentMode: .fit)
+                            
+                        })
                     }
                 }
                 .padding()
@@ -34,21 +37,6 @@ struct GalleryView: View {
         }
         .navigationBarTitle("Image Gallery")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(isEditing ? "Done" : "Edit") {
-                    withAnimation { isEditing.toggle() }
-                }
-            }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    isAddingPhoto = true
-                } label: {
-                    Image(systemName: "plus")
-                }
-                .disabled(isEditing)
-            }
-        }
     }
 }
 
