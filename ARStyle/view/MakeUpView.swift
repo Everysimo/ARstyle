@@ -156,8 +156,12 @@ class FacePaintingView: ARView {
     }
 
     func updateFaceTextureWithLatestDrawing() {
-        let newImage = UIImage(named: "wireframeTexture.png")
-        updateFaceEntityTextureUsing(cgImage: (newImage?.cgImage)!)
+        let imag2 = UIImage(named: "winter_blush_3.png")!
+        let imag3 = UIImage(named: "winter_eyeliner_3.png")!
+        let imag4 = UIImage(named: "winter_lipstick_3.png")!
+        let imag5 = UIImage(named: "winter_eyeshadow_3.png")!
+        let newImage = imag2.mergeWith(topImage: imag3).mergeWith(topImage: imag4).mergeWith(topImage: imag5)
+        updateFaceEntityTextureUsing(cgImage: (newImage.cgImage)!)
     }
 
     func updateFaceEntityTextureUsing(cgImage: CGImage) {
@@ -168,7 +172,7 @@ class FacePaintingView: ARView {
 
         var faceMaterial = PhysicallyBasedMaterial()
         faceMaterial.baseColor.texture = PhysicallyBasedMaterial.Texture(faceTexture)
-        faceMaterial.opacityThreshold = 0.5
+        faceMaterial.opacityThreshold = -1
 
 
         faceEntity.model!.materials = [faceMaterial]
@@ -269,6 +273,24 @@ extension FacePaintingView: PKCanvasViewDelegate {
     func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
         updateFaceTextureWithLatestDrawing()
     }
+}
+
+extension UIImage {
+  func mergeWith(topImage: UIImage) -> UIImage {
+    let bottomImage = self
+
+    UIGraphicsBeginImageContext(size)
+
+
+    let areaSize = CGRect(x: 0, y: 0, width: bottomImage.size.width, height: bottomImage.size.height)
+    bottomImage.draw(in: areaSize)
+
+    topImage.draw(in: areaSize, blendMode: .normal, alpha: 1.0)
+
+    let mergedImage = UIGraphicsGetImageFromCurrentImageContext()!
+    UIGraphicsEndImageContext()
+    return mergedImage
+  }
 }
 
 #if DEBUG

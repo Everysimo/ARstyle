@@ -16,7 +16,7 @@ struct AnalyzeView : View {
             ZStack(alignment: .bottom){
                 ARViewContainer(object:  $object, type: $object, color: $object).edgesIgnoringSafeArea(.all)
                 VStack{
-                    Text("Take a selfie in a well-lit environment to analyze your face!")
+                    Text("Keep your head in the circle and take a photo")
                         .multilineTextAlignment(.center)
                         .font(.title3)
                         .frame(width: 420.0)
