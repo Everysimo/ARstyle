@@ -23,7 +23,7 @@ struct WelcomePage: View {
             //logo
             VStack(alignment: .center, content: {
                 VStack{
-                    Text("Discover your best look according to your Face shape with our Artificial Intelligence").multilineTextAlignment(.center).padding(.horizontal, 15.0).foregroundColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
+                    Text("Discover your best look according to your Face shape with our Artificial Intelligence").multilineTextAlignment(.center).padding(.horizontal, 15.0).foregroundColor(Color(red: 36 / 255, green: 64 / 255, blue: 61 / 255))
                         .font(.system(size: 17, weight: .bold, design: .default))
                 }.frame(width: .infinity, height: 80)
                     .background(Color(red: 72 / 255, green: 202 / 255, blue: 217 / 255))

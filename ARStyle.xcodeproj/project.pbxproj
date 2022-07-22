@@ -16,6 +16,8 @@
 		263585ED2881DC5300828682 /* ARStyleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263585EC2881DC5300828682 /* ARStyleUITestsLaunchTests.swift */; };
 		2641083C288953DB0051D3E5 /* PreferencesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2641083B288953DB0051D3E5 /* PreferencesPage.swift */; };
 		26AD682128884CFF0061EAB1 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AD682028884CFF0061EAB1 /* WelcomePage.swift */; };
+		26D8DC94288A9B21007F3710 /* MakeUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D8DC93288A9B21007F3710 /* MakeUpView.swift */; };
+		26D8DC96288A9DAF007F3710 /* MakeUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D8DC95288A9DAF007F3710 /* MakeUpView.swift */; };
 		4D24CF852888D94900B23148 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24CF842888D94900B23148 /* CameraModel.swift */; };
 		4D3A2850288615C600CBA859 /* glasses1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A284F288615C600CBA859 /* glasses1.rcproject */; };
 		4D3A2852288616CF00CBA859 /* glasses2.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A2851288616CF00CBA859 /* glasses2.rcproject */; };
@@ -27,7 +29,6 @@
 		4D5109F5288948BF00A3FBB7 /* MLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5109F4288948BF00A3FBB7 /* MLModel.swift */; };
 		4D5109F7288957CF00A3FBB7 /* PhototypeClassifier.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4D5109F6288957CE00A3FBB7 /* PhototypeClassifier.mlkitmodel */; };
 		4D5109F928895BE200A3FBB7 /* AnalyzeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5109F828895BE200A3FBB7 /* AnalyzeView.swift */; };
-		4D5109FB28895BED00A3FBB7 /* MakeUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5109FA28895BED00A3FBB7 /* MakeUpView.swift */; };
 		4D5109FD28897DFE00A3FBB7 /* FaceShapeClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4D5109FC28897DFD00A3FBB7 /* FaceShapeClassifier.mlmodel */; };
 		4DA0500A28882CE8006EEF3D /* hair8.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0500928882CE8006EEF3D /* hair8.rcproject */; };
 		4DA0500E28883CE8006EEF3D /* hair7.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0500D28883CE8006EEF3D /* hair7.rcproject */; };
@@ -76,6 +77,8 @@
 		263585EC2881DC5300828682 /* ARStyleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARStyleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2641083B288953DB0051D3E5 /* PreferencesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesPage.swift; sourceTree = "<group>"; };
 		26AD682028884CFF0061EAB1 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		26D8DC93288A9B21007F3710 /* MakeUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeUpView.swift; sourceTree = "<group>"; };
+		26D8DC95288A9DAF007F3710 /* MakeUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MakeUpView.swift; path = ../../../../Downloads/MakeUpView.swift; sourceTree = "<group>"; };
 		4D24CF842888D94900B23148 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		4D3A284F288615C600CBA859 /* glasses1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses1.rcproject; sourceTree = "<group>"; };
 		4D3A2851288616CF00CBA859 /* glasses2.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = glasses2.rcproject; sourceTree = "<group>"; };
@@ -87,7 +90,6 @@
 		4D5109F4288948BF00A3FBB7 /* MLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLModel.swift; sourceTree = "<group>"; };
 		4D5109F6288957CE00A3FBB7 /* PhototypeClassifier.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PhototypeClassifier.mlkitmodel; sourceTree = "<group>"; };
 		4D5109F828895BE200A3FBB7 /* AnalyzeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeView.swift; sourceTree = "<group>"; };
-		4D5109FA28895BED00A3FBB7 /* MakeUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeUpView.swift; sourceTree = "<group>"; };
 		4D5109FC28897DFD00A3FBB7 /* FaceShapeClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FaceShapeClassifier.mlmodel; sourceTree = "<group>"; };
 		4DA0500928882CE8006EEF3D /* hair8.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair8.rcproject; sourceTree = "<group>"; };
 		4DA0500D28883CE8006EEF3D /* hair7.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hair7.rcproject; sourceTree = "<group>"; };
@@ -239,11 +241,12 @@
 		4DC82FF02888479100306C9D /* view */ = {
 			isa = PBXGroup;
 			children = (
+				26D8DC95288A9DAF007F3710 /* MakeUpView.swift */,
 				60DB7F81288870DC009F391E /* GalleryView.swift */,
 				60DB7F8828887E60009F391E /* ImageView.swift */,
-				4D5109FA28895BED00A3FBB7 /* MakeUpView.swift */,
 				4D5109F828895BE200A3FBB7 /* AnalyzeView.swift */,
 				26AD682028884CFF0061EAB1 /* WelcomePage.swift */,
+				26D8DC93288A9B21007F3710 /* MakeUpView.swift */,
 				60F698F728885414006C63A6 /* ProfileView.swift */,
 				4DE01945288567E7004FEDDD /* CustomPicker.swift */,
 				4DDC57FF2888C1A700A7630D /* ArView.swift */,
@@ -386,16 +389,17 @@
 				4D3A2850288615C600CBA859 /* glasses1.rcproject in Sources */,
 				4D3A285E28863FD600CBA859 /* glasses7.rcproject in Sources */,
 				26AD682128884CFF0061EAB1 /* WelcomePage.swift in Sources */,
-				4D5109FB28895BED00A3FBB7 /* MakeUpView.swift in Sources */,
 				4D5109F5288948BF00A3FBB7 /* MLModel.swift in Sources */,
 				263585D02881DC5000828682 /* ContentView.swift in Sources */,
 				60DB7F85288875FB009F391E /* ImageModel.swift in Sources */,
 				4D3A28582886358900CBA859 /* glasses4.rcproject in Sources */,
 				4DDC58002888C1A700A7630D /* ArView.swift in Sources */,
+				26D8DC96288A9DAF007F3710 /* MakeUpView.swift in Sources */,
 				4DD2E3ED2887ED860046FD7A /* hair3.rcproject in Sources */,
 				4DA0500A28882CE8006EEF3D /* hair8.rcproject in Sources */,
 				60DB7F82288870DC009F391E /* GalleryView.swift in Sources */,
 				4D3A285C28863FB100CBA859 /* glasses6.rcproject in Sources */,
+				26D8DC94288A9B21007F3710 /* MakeUpView.swift in Sources */,
 				4D3A285A28863F2C00CBA859 /* glasses5.rcproject in Sources */,
 				4D3A2852288616CF00CBA859 /* glasses2.rcproject in Sources */,
 				60DB7F8928887E60009F391E /* ImageView.swift in Sources */,

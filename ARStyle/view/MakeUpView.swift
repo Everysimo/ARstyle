@@ -14,16 +14,35 @@ import PencilKit
 
 struct MakeUpView: View {
     var canvasView = PKCanvasView()
+    @State var type:Int=0
+    var imgType = ["1.circle.fill","2.circle.fill","3.circle.fill","4.circle.fill","5.circle.fill","6.circle.fill","7.circle.fill"]
 
     var body: some View {
-        HStack {
-            ARViewContainer2(canvasView: canvasView)
+        ZStack {
+            ARViewContainer2(makeUp: $type, canvasView: canvasView)
                 .edgesIgnoringSafeArea(.all)
+            VStack{
+                Spacer()
+                ScrollView(.horizontal, showsIndicators: false){
+                        HStack{
+                            ForEach(0..<imgType.count, id:\.self) {
+                                id in
+                                Button(action: {
+                                    type=id
+                                }){
+                                        Image(systemName: imgType[id]).resizable()
+                                            .frame(width: 63.0, height: 63.0)
+                                }
+                            }
+                        }
+                    }
+            }
         }
     }
 }
 
 struct ARViewContainer2: UIViewRepresentable {
+    @Binding var makeUp:Int
     
     let canvasView: PKCanvasView
 
@@ -35,6 +54,7 @@ struct ARViewContainer2: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: FacePaintingView, context: Context) {
+        uiView.setMakeUp(makeUp: makeUp)
         DispatchQueue.main.async {
             uiView.becomeFirstResponder()
         }
@@ -118,27 +138,36 @@ struct RaycastResult {
     }
 }
 
-class FacePaintingView: ARView {
+class FacePaintingView: ARView, PKCanvasViewDelegate {
 
     var lastTouchPoint: UITouch?
     var startNewLine = false
     var subscription: Cancellable?
     var faceEntity: HasModel? = nil
     var canvasView: PKCanvasView!
+    var makeUp:Int=0
 
     static let sceneUnderstandingQuery = EntityQuery(where: .has(SceneUnderstandingComponent.self) && .has(ModelComponent.self))
 
     required init(frame: CGRect) {
         super.init(frame: frame)
         isMultipleTouchEnabled = true
+        updateFaceTextureWithLatestDrawing()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         isMultipleTouchEnabled = true
     }
+    
+    func setMakeUp(makeUp:Int){
+        self.makeUp=makeUp
+        updateFaceTextureWithLatestDrawing()
+    }
 
-    override var canBecomeFirstResponder: Bool { true }
+    override var canBecomeFirstResponder: Bool {
+        true
+    }
 
     func setup(canvasView: PKCanvasView) {
         self.canvasView = canvasView
@@ -156,12 +185,59 @@ class FacePaintingView: ARView {
     }
 
     func updateFaceTextureWithLatestDrawing() {
-        let imag2 = UIImage(named: "winter_blush_3.png")!
-        let imag3 = UIImage(named: "winter_eyeliner_3.png")!
-        let imag4 = UIImage(named: "winter_lipstick_3.png")!
-        let imag5 = UIImage(named: "winter_eyeshadow_3.png")!
-        let newImage = imag2.mergeWith(topImage: imag3).mergeWith(topImage: imag4).mergeWith(topImage: imag5)
-        updateFaceEntityTextureUsing(cgImage: (newImage.cgImage)!)
+        switch(makeUp){
+            case 0:
+                let imag2 = UIImage(named: "autumn_eyeshadow_1.png")!
+                let imag3 = UIImage(named: "autumn_eyeliner_1.png")!
+                let imag4 = UIImage(named: "autumn_blush_3.png")!
+                let imag5 = UIImage(named: "autumn_lipstick_3.png")!
+                let newImage = imag2.mergeWith(topImage: imag3).mergeWith(topImage: imag4).mergeWith(topImage: imag5)
+                updateFaceEntityTextureUsing(cgImage: (newImage.cgImage)!)
+            case 1:
+                let imag2 = UIImage(named: "spring_eyeshadow_2.png")!
+                let imag3 = UIImage(named: "spring_eyeliner_2.png")!
+                let imag4 = UIImage(named: "spring_blush_2.png")!
+                let imag5 = UIImage(named: "spring_lipstick_1.png")!
+                let newImage = imag2.mergeWith(topImage: imag3).mergeWith(topImage: imag4).mergeWith(topImage: imag5)
+                updateFaceEntityTextureUsing(cgImage: (newImage.cgImage)!)
+            case 2:
+                let imag2 = UIImage(named: "summer_eyeshadow_2.png")!
+                let imag3 = UIImage(named: "summer_eyeliner_2.png")!
+                let imag4 = UIImage(named: "summer_blush_3.png")!
+                let imag5 = UIImage(named: "summer_lipstick_3.png")!
+                let newImage = imag2.mergeWith(topImage: imag3).mergeWith(topImage: imag4).mergeWith(topImage: imag5)
+                updateFaceEntityTextureUsing(cgImage: (newImage.cgImage)!)
+            case 3:
+                let imag2 = UIImage(named: "winter_eyeshadow_3.png")!
+                let imag3 = UIImage(named: "winter_eyeliner_1.png")!
+                let imag4 = UIImage(named: "winter_blush_3.png")!
+                let imag5 = UIImage(named: "winter_lipstick_2.png")!
+                let newImage = imag2.mergeWith(topImage: imag3).mergeWith(topImage: imag4).mergeWith(topImage: imag5)
+                updateFaceEntityTextureUsing(cgImage: (newImage.cgImage)!)
+            case 4:
+                let imag2 = UIImage(named: "winter_eyeshadow_2.png")!
+                let imag3 = UIImage(named: "winter_eyeliner_2.png")!
+                let imag4 = UIImage(named: "winter_blush_3.png")!
+                let imag5 = UIImage(named: "winter_lipstick_3.png")!
+                let newImage = imag2.mergeWith(topImage: imag3).mergeWith(topImage: imag4).mergeWith(topImage: imag5)
+                updateFaceEntityTextureUsing(cgImage: (newImage.cgImage)!)
+            case 5:
+                let imag2 = UIImage(named: "summer_eyeshadow_1.png")!
+                let imag3 = UIImage(named: "summer_eyeliner_1.png")!
+                let imag4 = UIImage(named: "summer_blush_2.png")!
+                let imag5 = UIImage(named: "summer_lipstick_1.png")!
+                let newImage = imag2.mergeWith(topImage: imag3).mergeWith(topImage: imag4).mergeWith(topImage: imag5)
+                updateFaceEntityTextureUsing(cgImage: (newImage.cgImage)!)
+            case 6:
+                let imag2 = UIImage(named: "spring_eyeshadow_3.png")!
+                let imag3 = UIImage(named: "spring_eyeliner_3.png")!
+                let imag4 = UIImage(named: "spring_blush_3.png")!
+                let imag5 = UIImage(named: "spring_lipstick_3.png")!
+                let newImage = imag2.mergeWith(topImage: imag3).mergeWith(topImage: imag4).mergeWith(topImage: imag5)
+                updateFaceEntityTextureUsing(cgImage: (newImage.cgImage)!)
+            default:
+                break
+        }
     }
 
     func updateFaceEntityTextureUsing(cgImage: CGImage) {

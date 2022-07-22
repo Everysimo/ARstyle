@@ -11,6 +11,7 @@ import ARKit
 
 struct AnalyzeView : View {
     var camera=CameraModel()
+    @Environment(\.dismiss) var dismiss
     @State var object:Int=1000
     var body: some View {
             ZStack(alignment: .bottom){
@@ -30,15 +31,16 @@ struct AnalyzeView : View {
                         .stroke(style: StrokeStyle(lineWidth: 3, lineCap: .butt, dash: [3,  20]))
                         .frame(width: 300, height: 450)
                     Spacer()
-                    Button(action:{
-                        self.takeSnapshot()
-                    }){
-                        Image(systemName: "camera.circle")
-                            .resizable(resizingMode: .stretch)
-                            .foregroundColor(Color.white)
-                            .frame(width: 70.0, height: 70.0)
-                            
-                    }
+                        Button(action:{
+                            self.takeSnapshot()
+                        }){
+                            Image(systemName: "camera.circle")
+                                .resizable(resizingMode: .stretch)
+                                .foregroundColor(Color.white)
+                                .frame(width: 70.0, height: 70.0)
+                                
+                        }
+                
                 }
                        
             }
@@ -52,7 +54,9 @@ struct AnalyzeView : View {
             UserDefaults.standard.set(e.0, forKey: "faceShape")
             UserDefaults.standard.set(e.1, forKey: "seasson")
             UserDefaults.standard.set(true, forKey: "usersFirstLaunch")
+            
         }
+        dismiss()
     }
     func skip(){
         UserDefaults.standard.set("unknown", forKey: "faceShape")
