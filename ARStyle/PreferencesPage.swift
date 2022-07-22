@@ -300,6 +300,7 @@ struct PreferencesPage: View {
                 })
             })
         }).frame(width: .infinity, height: .infinity, alignment: .center)
+            .padding(.horizontal, 5.0).navigationTitle(Text("Preferences")).navigationBarTitleDisplayMode(.inline).navigationBarItems(trailing: NavigationLink("Save",destination: ProfileView()))
     }
 }
 

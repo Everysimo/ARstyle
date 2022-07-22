@@ -20,7 +20,11 @@ struct AnalyzeView : View {
                         .multilineTextAlignment(.center)
                         .font(.title3)
                         .frame(width: 420.0)
-                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.2823529411764706, green: 0.792156862745098, blue: 0.8509803921568627)/*@END_MENU_TOKEN@*/)
+                        .padding()
+                        .font(.system(size: 25, weight: .bold, design: .rounded))
+                        .foregroundColor(Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255))
+                        .background(Color(red: 3 / 255, green: 127 / 255, blue: 140 / 255))
+                    
                     Spacer()
                     Ellipse()
                         .stroke(style: StrokeStyle(lineWidth: 3, lineCap: .butt, dash: [3,  20]))

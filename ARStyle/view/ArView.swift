@@ -42,7 +42,7 @@ struct ArView: View {
                 }
                 .padding(.top, 10.0)
             }
-        }.navigationBarItems(leading: NavigationLink("profile",destination: ProfileView()) ,trailing: NavigationLink("makeup",destination: MakeUpView()))
+        }.navigationBarItems(leading: NavigationLink("Profile",destination: ProfileView()))
     }
     func takeSnapshot(){
         arView.snapshot(saveToHDR: false){

@@ -110,6 +110,12 @@ struct CustomPicker : View {
                     }.buttonStyle(PlainButtonStyle()).background(Color.clear)
                     Spacer()
                 }
+                NavigationLink(destination: MakeUpView()){
+                    Image("cosmetics").resizable()
+                        .padding(.horizontal, 7.0)
+                        .frame(width: 63.0, height: 63.0)
+                }
+                Spacer()
             }
         }
     }
